@@ -1,0 +1,27 @@
+<html lang="ja">
+<head>
+<title>CCCC</title>
+</head>
+<body>
+<p>ICカード読込結果CSVを雑に作成</p>
+
+<label for="name">家の最寄の、鉄道会社名:<input type="text" id="company_in" name="company_in" size="10" value="都営"/></label><br>
+<label for="name">家の最寄の、駅/事業者名:<input type="text" id="station_in" name="station_in" size="10" value="春日"/></label><br>
+<label for="name">会社の最寄の、鉄道会社名:<input type="text" id="company_out" name="company_out" size="10" value="東京メトロ"/></label><br>
+<label for="name">会社の最寄の、駅/事業者名:<input type="text" id="station_out" name="station_out" size="10" value="六本木"/></label><br>
+<label for="name">片道の通勤費:<input type="text" id="price" name="price" size="10" value="286"/></label><br>
+
+<div id="current_yyyymm">
+    <script src="encoding.js"></script>
+    <script src="script.js"></script>
+</div>
+
+<input type="button" id="1" value="毎日通勤したときのデータをダウンロード" onclick="download_csv()">
+
+祝日は考慮されてません。
+祝日に限らず、通勤しなかった日のデータは削除してください。
+往復ではなく片道のレコードを2行1組で出力して往復にしています（本来のカードでもそうなる）。
+擬似的にやってみただけなので責任は取れません。
+</script>
+</body>
+</html>
